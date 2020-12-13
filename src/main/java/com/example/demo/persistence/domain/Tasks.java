@@ -18,8 +18,8 @@ public class Tasks {
     @NotNull
     private String name;
 
-    @ManyToOne
-    private TaskList taskList;
+    @ManyToOne (targetEntity = TaskList.class)
+    private TaskList tasks;
 
     public Tasks(String name) {
         super();

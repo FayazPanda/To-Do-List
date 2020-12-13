@@ -7,6 +7,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,9 +22,9 @@ public class TaskList {
     @NotNull
     public String name;
 
-    @OneToMany(mappedBy = "tasklist", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "tasks", fetch = FetchType.EAGER)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private List<Tasks> tasks;
+    private List<Tasks> tasks =  new ArrayList<>();
 
     public TaskList(String name) {
         super();

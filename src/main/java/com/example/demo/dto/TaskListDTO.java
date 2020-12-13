@@ -13,5 +13,5 @@ public class TaskListDTO {
     public Long id;
     public String name;
 
-    private List<TaskDTO> cars = new ArrayList<>();
+    private List<TaskDTO> tasks = new ArrayList<>();
 }
