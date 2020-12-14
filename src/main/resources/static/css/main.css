@@ -1,0 +1,37 @@
+*{
+  background: #222425;
+}
+
+div{
+  display: flex;
+  background: #303050;
+  flex-direction: column;
+  border-style: ridge;
+  box-sizing: inherit;
+  border-radius: 16px;
+  padding: 10px;
+  margin:1em 2em;
+}
+div *{
+  background: #303050;
+}
+h1 {
+  padding: 1em;
+  color: rgb(222, 220, 217);
+  font-family: Roboto, sans-serif;
+  margin: 0px;
+}
+
+ul{
+  color: rgb(222, 220, 217);
+  font-family: Roboto, sans-serif;
+  flex-direction: row;
+}
+
+ul *{
+  padding-left: 10px;
+}
+
+i{
+    padding-left: 10px;
+}
