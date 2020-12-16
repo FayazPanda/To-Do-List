@@ -91,7 +91,7 @@ fetch('http://localhost:9092/tasklist/read')
                         const del = document.createElement('a')
                         const deli = document.createElement('i')
                         deli.className = "fas fa-trash-alt"
-                        del.onclick = function(){fetch("http://localhost:9092/tasklist/delete/"+j.id,{method: 'delete'})
+                        del.onclick = function(){fetch("http://localhost:9092/task/delete/"+j.id,{method: 'delete'})
                             refresh(1000)}
                         del.appendChild(deli)
 

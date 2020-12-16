@@ -65,7 +65,7 @@ public class TasksControllerUnitTest {
     }
 
     @Test
-    void UpdateTest() throws Exception {
+    void updateTest() throws Exception {
         when(this.service.update(this.maptoDto(TTASK1), TTASK1.getId())).thenReturn(this.maptoDto(TTASK1));
         assertThat(new ResponseEntity<TaskDTO>(this.maptoDto(TTASK1), HttpStatus.ACCEPTED))
                 .isEqualTo(this.controller.update(TTASK1.getId(), this.maptoDto(TTASK1)));

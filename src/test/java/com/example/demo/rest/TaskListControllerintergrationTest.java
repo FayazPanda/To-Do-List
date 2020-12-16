@@ -114,22 +114,16 @@ public class TaskListControllerintergrationTest {
 
         ResultMatcher checkStatus = status().isAccepted();
 
-        TaskListDTO testSavedDTO = mapToDTO(new TaskList(1L, "Pandamonium"));
-        String testSavedDTOAsJSON = this.jsonifier.writeValueAsString(testSavedDTO);
+        TaskList LTASK1 = new TaskList(1L, "Pandamonium");
+        List<Tasks> TASKS1 = List.of(new Tasks(1L, "Milk"), new Tasks(2L, "Eggs"), new Tasks(3L, "Flour"));
+        LTASK1.setTasks(TASKS1);
+        TaskListDTO TASK1DTO = mapToDTO(LTASK1);
+
+        String testSavedDTOAsJSON = this.jsonifier.writeValueAsString(TASK1DTO);
 
         ResultMatcher checkBody = content().json(testSavedDTOAsJSON);
 
         this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
-
-    }
-
-    @Test
-    void deleteTest() throws Exception {
-
-        RequestBuilder request = delete(URI + "/delete/1");
-        ResultMatcher checkStatus = status().isNoContent();
-
-        this.mvc.perform(request).andExpect(checkStatus);
 
     }
 
