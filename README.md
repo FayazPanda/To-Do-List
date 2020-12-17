@@ -18,15 +18,15 @@ http://maven.apache.org/download.cgi
 
 Navigate to where you have downloaded the jar file then right click and open bash
 
-![open bash screenshot](https://github.com/To-Do-List/JavaProject/blob/main/images/tut1.png)
+![open bash screenshot](https://github.com/FayazPanda/To-Do-List/blob/main/images/tut1.png)
 
 Then type **java -jar fat.jar** replacing the fat with whatever you might have renamed it to
 
-![run command screenshot](https://github.com/To-Do-List/JavaProject/blob/main/images/tut2.png)
+![run command screenshot](https://github.com/FayazPanda/To-Do-List/blob/main/images/tut2.png)
 
 Once running, 'Springboot' should appear in ascII text at the start and the system will be fully booted once you see the line ''To-Do List API Initialised''
 
-![Entity usage Screenshot](https://github.com/To-Do-List/JavaProject/blob/main/images/tut3.png)
+![Entity usage Screenshot](https://github.com/FayazPanda/To-Do-List/blob/main/images/tut3.png)
 
 ## Running the tests
 
