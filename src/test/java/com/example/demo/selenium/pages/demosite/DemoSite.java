@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class DemoSite {
     // ATTRIBUTES
-    public static final String URL = "http://127.0.0.1:9092/";
+    public static final String URL = "http://127.0.0.1:8080/";
 
     @FindBy(xpath = "/html/body/h1/a")
     private WebElement createTaskList;
