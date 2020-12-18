@@ -1,11 +1,11 @@
-package com.example.demo.selenium.pages.demosite;
+package com.example.demo.selenium.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DemoSite {
+public class Site {
     // ATTRIBUTES
-    public static final String URL = "http://127.0.0.1:8080/";
+    public static final String URL = "http://127.0.0.1:9092/";
 
     @FindBy(xpath = "/html/body/h1/a")
     private WebElement createTaskList;
@@ -26,7 +26,7 @@ public class DemoSite {
     private WebElement deleteTask;
 
     // CONSTRUCTOR
-    public DemoSite() {
+    public Site() {
     }
 
     // METHODS

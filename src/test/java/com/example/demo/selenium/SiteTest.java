@@ -1,6 +1,6 @@
 package com.example.demo.selenium;
 
-import com.example.demo.selenium.pages.demosite.DemoSite;
+import com.example.demo.selenium.pages.Site;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 import static org.junit.Assert.assertFalse;
 
-public class DemoSiteTest {
+public class SiteTest {
 
     private static RemoteWebDriver driver;
     private static final Logger LOGGER = Logger.getGlobal();
@@ -47,13 +47,13 @@ public class DemoSiteTest {
     @Before
     public void setup() {
         LOGGER.warning("Connecting to The Demo Site....");
-        driver.get(DemoSite.URL);
+        driver.get(Site.URL);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @Test
     public void createTaskList() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.createTL();
         driver.switchTo().alert().sendKeys("Pandamonium");
@@ -63,7 +63,7 @@ public class DemoSiteTest {
 
     @Test
     public void createTask() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.createT();
         driver.switchTo().alert().sendKeys("Panda");
@@ -73,7 +73,7 @@ public class DemoSiteTest {
 
     @Test
     public void updateTaskList() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.updateTL();
         driver.switchTo().alert().sendKeys("Dog");
@@ -83,7 +83,7 @@ public class DemoSiteTest {
 
     @Test
     public void updateTask() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.updateT();
         driver.switchTo().alert().sendKeys("Cat");
@@ -93,7 +93,7 @@ public class DemoSiteTest {
 
     @Test
     public void deleteTaskList() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.deleteTL();
         driver.navigate().refresh();
@@ -102,7 +102,7 @@ public class DemoSiteTest {
 
     @Test
     public void deleteTask() throws InterruptedException {
-        DemoSite webpage = PageFactory.initElements(driver, DemoSite.class);
+        Site webpage = PageFactory.initElements(driver, Site.class);
 
         webpage.deleteT();
         driver.navigate().refresh();
